@@ -1,0 +1,175 @@
+
+Ktra ok k b
+Đc b
+Cô cô dễ lắm
+Cô còn đi ra ngoài
+#include<bits/stdc++.h>
+using namespace std;
+struct SV{
+	char msv[10];
+	char hodem[25];
+	char ten[20];
+	char gioitinh[5];
+	double diemtk;
+};
+
+struct Node{
+	SV infor;
+	Node *next;
+};
+
+typedef Node *Tro;
+Tro L;
+
+void create(Tro &L){
+	L = NULL;
+}
+
+int empty(Tro L){
+	return L == NULL;
+}
+
+SV taosv(char msv[10], const char* hodem, const char* ten, const char* gioitinh, double diemtk ){
+	SV sv;
+	strcpy(sv.msv, msv);
+	strcpy(sv.hodem, hodem);
+	strcpy(sv.ten, ten);
+	strcpy(sv.gioitinh, gioitinh);
+	sv.diemtk = diemtk;
+	return sv;
+}
+
+void display(SV sv){
+	cout<<fixed;
+	cout<<setw(10)<<left<<sv.msv;
+	cout<<setw(15)<<sv.hodem;
+	cout<<setw(10)<<sv.ten;
+	cout<<setw(7)<<sv.gioitinh;
+	cout<<setw(7)<<setprecision(2)<<sv.diemtk<<endl;
+}
+
+void add(Tro &L, SV sv){
+	Tro Q = L, P = new Node;
+	P->infor =  sv;
+	P->next = NULL;
+	if(empty(L)){
+		L = P;
+	}
+	else{
+		while(Q->next != NULL){
+			Q = Q->next;
+		}
+		Q->next = P;
+	}
+}
+
+void taods(Tro &L){
+	add(L,taosv("SV001","Tran Van", "Anh","Nam",7.5));
+	add(L,taosv("SV002","Nguyen Thi", "Hoa","Nu",7.3));
+	add(L,taosv("SV003","Nguyen Van", "Binh","Nam",6.4));
+	add(L,taosv("SV004","Bui Thu", "Lan","Nu",5.8));
+	add(L,taosv("SV005","Tran Hoai", "Nam","Nam",8.3));
+	
+}
+
+void htds(Tro L){
+	cout<<"Ma SV"<<setw(10)<<"Ho dem"<<setw(15)<<"Ten"<<setw(10)<<"Gioi tinh"<<setw(10)<<"Diem TK"<<endl;
+	Tro Q=L;
+	while(Q!=NULL){
+		display(Q->infor);
+		Q = Q->next;
+	}
+	cout<<"-----------------------------------"<<endl;
+}
+
+
+Tro search_k(Tro L, int k){
+	int d=1;
+	Tro Q = L;
+	while (d<k-1 && Q->next != NULL){
+		d++;
+		Q=Q->next;
+	}
+	if(d<k-1){
+		return NULL;
+	}
+	return Q;
+}
+
+void insert(Tro &L, Tro Q, SV sv){
+	Tro P;
+	P = new Node;
+	P->infor = sv;
+	P->next = Q->next;
+	Q->next = P;
+}
+
+void chenVT4(Tro &L){
+	Tro Q = search_k(L,4);
+	if(Q == NULL){
+		cout<<"Khong tim thay vi tri chen"<<endl;
+		return;
+	}
+	insert(L,Q,taosv("Sv007","Vu Viet","Tu","Nam",8.0));
+}
+
+Tro tim(Tro L, char tenct[10])
+{	
+	Tro Q = L;
+	while(Q != NULL)
+	{
+		if(strcmp(Q->infor.ten,tenct)==0)
+		{
+			return Q;
+		}
+		Q = Q->next;
+	}
+	return NULL;
+}
+
+void xoa(Tro &L,char tenct[10])
+{
+	Tro Q = L, P = NULL;
+	while(Q != NULL && strcmp(Q->infor.ten,tenct) !=0)
+	{
+		P = Q;
+		Q = Q->next;
+	}
+	if(Q == NULL)
+	{
+		//cout<<"Khong tim thay ten de xoa";
+		return;
+	}
+	if(P == NULL)
+	{
+		L = L->next;
+	}
+	else{
+		P->next = Q->next;
+	}
+	delete Q;
+}
+int main(){
+	Tro L;
+	create(L);
+	taods(L);
+	cout<<"Danh sach vua tao la: "<<endl;
+	htds(L);
+	chenVT4(L);
+	cout<<"Danh sach sau khi chen la: "<<endl; htds(L);
+	char tenct[10];
+	cout<<"Nhap ten sinh vien can tim : ";
+	cin>>tenct;
+	Tro kq = tim(L, tenct);
+	
+	if(kq == NULL)
+	{
+		cout<<"Ko tim thay ten de xoa ";
+	}else{
+		display(kq->infor);
+	}
+	
+	xoa(L,tenct);
+	cout<<"\nDanh sach sau khi xoa"<<endl;
+	htds(L);
+}
