@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: antiquewhite;
+}
+header .Cty h1{
+    font-size: 14px;
+    font-weight: bold;
+    font-family:'Tahoma', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+header .Cty{
+    align-items: center;
+}
+.moTa{
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+fieldset p img{
+    width: 13px;
+    height: 13px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+fieldset p{
+    padding: 5px;
+    gap: 10px;
+}
+.nav{
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 50px 0px;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 30px;
+    padding: 5px;
+}
+.nav .menu{
+    display: flex;
+    list-style: none;
+}
+.nav .menu li{
+    padding: 0px 30px;
+    padding-left: 0px;
+}
+.nav div{
+    padding: 4px;
+}
+
+.nav .menu li a:hover{
+    background-color: #000080;
+    color: white;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    padding: 20px 50px;
+    margin-bottom: 30px;
+    
+}
+.sp img{
+    width: 200px;
+    height: 200px;
+}
+.products .sp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.products .sp .motasp{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer{
+    background-color: #0e4b8a;
+    color: white;
+    list-style: none;
+    padding: 10px 50px;
+    font-size: 14px;
+    justify-content: space-between;
+    display: flex;
+}
+.content ul {
+  padding-top: 20px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.content ul li a{
+    text-decoration: none;
+    color: white;
+}
+.end{
+    text-align: right;
+}
