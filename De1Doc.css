@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+}
+header .logo img{
+    width: 100px;
+    height: 100px;
+}
+header .tieuDe{
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+main{
+    display: flex;
+}
+ul.menu li{
+    width: 175px;
+    background-color: rgba(0,0,0,0.2);
+    list-style: none;
+    display: block;
+    padding: 5px 8px;
+    border-bottom: 1pt solid white;
+    position: relative;
+}
+ul.menu li:hover{
+    background-color: aquamarine;
+    color: chocolate;
+}
+ul.menu li:hover a{
+    color: chocolate;
+}
+ul.menu li a{
+    text-decoration: none;
+}
+ul.menu li ul{
+    position: absolute;
+    left: 175px;
+    display: none;
+    top:0px;
+}
+ul.menu li ul li{
+    width: 100px;
+}
+ul.menu li:hover ul{
+    display: block;
+}
+section{
+    margin: 10px 40px;
+}
+.content{
+    display: flex;
+}
+.content p{
+    padding: 20px;
+}
+.content img{
+    width: 100px;
+    height: 100px;
+}
+aside{
+    gap: 20px;
+}
+.log{
+    border: 1pt solid rgba(0,0,0,0.5);
+    text-align: center;
+}
+table{
+    width: 250px;
+}
+.tk input{
+    box-sizing: border-box;
+}
+.sp{
+    padding: 20px 0px;
+}
+.footer{
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    height: 25px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+}
