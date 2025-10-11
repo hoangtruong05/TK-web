@@ -26,14 +26,44 @@ header{
     background-color: rgba(0,0,0,0.6);
     justify-content: space-between;
     align-items: center;
-    padding: 10px 100px;
+    padding: 0px 100px;
 }
 .menu  li{
     list-style: none;
+    padding: 10px 0px;
+    position: relative;
 }
-.menu li a{
+.menu li> a{
     text-decoration: none;
     color: rgb(224, 223, 221);
+    padding: 10px 10px;
+}
+.menu li:hover > a{
+    background-color: rgba(0,0,0,0.4);
+    color: antiquewhite;
+}
+.menu li ul{
+    position: absolute;
+    display: none;
+    background-color: rgba(0,0,0,0.4);
+    width: 150px;
+    top: 100%;
+    left: 0;
+}
+.menu li ul li{
+    list-style: none;
+    padding: 0px 0px;
+}
+.menu li ul li>a{
+    padding: 8px 10px;
+    display: block;
+}
+.menu li ul li:hover>a{
+    border-bottom: 1px solid rgb(108, 106, 106);
+    color: aliceblue;
+}
+.menu li:hover ul{
+    display: block;
 }
 
 section{
