@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 80%;
+}
+header{
+    display: flex;
+    background-color: rgba(0,0,0,0.8);
+    align-items: center;
+}
+.logo img{
+    height: 100px;
+    width: auto;
+}
+.ten{
+    text-align: center;
+    margin-left: 300px;
+    color: rgb(227, 232, 236);
+}
+
+.menu{
+    display: flex;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+}
+.menu  li{
+    list-style: none;
+}
+.menu li a{
+    text-decoration: none;
+    color: rgb(224, 223, 221);
+}
+
+section{
+    display: flex;
+}
+.dsKhoa{
+    width: 500px;
+    margin:20px 20px 0px 20px;
+}
+.dsKhoa ol li{
+    margin-top: 10px;
+}
+.dsKhoa ol li a{
+    text-decoration: none;
+    padding: 0px 10px;
+    color: rgb(13, 13, 13);
+}
+
+.container{
+    display: block;
+}
+
+.content{
+    display: flex;
+    margin: 20px 0px 30px;
+}
+.content img{
+    height: 100px;
+    width: auto;
+    margin-right: 5px;
+}
+
+.acide{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.acide table{
+    width: 100%;
+}
+.log{
+    margin-top: 3px;
+    border: 0.5px solid rgba(0,0,0,0.6);
+}
+footer{
+    background-color: rgba(0,0,0,0.8);
+    color: rgb(208, 206, 203);
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    width: 80%;
+    padding: 5px;
+}
