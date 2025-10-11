@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,0,0,0.8);
+    color: aliceblue;
+}
+
+.logo img{
+    height: 100px;
+    width: auto;
+}
+.ten{
+    text-align: center;
+}
+
+section{
+    display: flex;
+}
+.nav{
+    display: block;
+}
+
+.nav ul li{
+    border-top: 0.5px solid rgba(0,0,0,0.6);
+    padding: 10px 12px;
+    width: 200px;
+    display: block;
+    list-style: none;
+    background-color: rgba(0,0,0,0.6);
+    margin-right: 30px;
+    position: relative;
+}
+.nav ul li >a{
+    color: rgb(197, 195, 195);
+    text-decoration: none;
+    padding: 8px 10px;
+}
+.nav ul li:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+.nav ul li ul{
+    position: absolute;
+    left: 200px;
+    top: 0%;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    width: 150px;
+}
+.nav ul li ul li{
+    border-top: 1px solid whitesmoke;
+}
+.nav ul li ul li:hover{
+    background-color: aquamarine;
+}
+.nav ul li:hover ul{
+    display: block;
+}
+
+
+.content{
+    display: flex;
+    margin: 20px;
+}
+.content img{
+    height: 100px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.sidebar{
+    margin-right: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.log{
+    border: 1px solid rgba(0,0,0,0.6);
+    padding: 2px;
+}
+
+footer{
+    background-color: rgba(0,0,0,0.8);
+    color: aliceblue;
+    text-align: center;
+    padding: 5px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
